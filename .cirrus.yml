@@ -3,6 +3,8 @@ task:
     matrix:
       image: freebsd-12-0-release-amd64
       image: freebsd-11-2-release-amd64
+  environment:
+    CIRRUS_SHELL: /bin/sh
   echo_script: printenv
   install_script: |
     pkg install -y curl
